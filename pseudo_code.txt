@@ -1,0 +1,50 @@
+Write out pseudo-code (both casual and formal) that does the following:
+
+1. a method that returns the sum of two integers
+
+START
+
+# Given two integers called integer1 and integer2
+
+SET sum equals integer1 plus integer2
+
+PRINT sum
+
+END
+
+2. a method that takes an array of strings, and returns a string that is all 
+those strings concatenated together
+
+START
+
+# Given a collection of strings called strings
+
+SET iterator = 1
+SET string = ''
+
+WHILE iterator < length of strings
+  GET value of the string within strings matching the location of the iterator
+  SET string = previous value of string plus this new value
+  SET iterator = iterator + 1
+
+PRINT string
+
+END
+
+3. a method that takes an array of integers, and returns a new array with 
+every other element
+
+START
+
+SET integers = a given array of integers
+SET iterator = 1
+SET new_array_of_integers = a new array
+
+WHILE iterator < length of integers
+  SET integer = value at location iterator from integers
+  add integer to new_array_of_integers
+  SET iterator = iterator + 2
+
+PRINT new_array_of_integers
+
+END
