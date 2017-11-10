@@ -1,9 +1,3 @@
-# m = monthly payment
-# p = loan amount
-# j = monthly interest rate
-# n = loan duration in months
-# m = p * (j / (1 - (1 + j)**(-n)))
-
 def integer?(n)
   n.to_s().length() == n.to_i().to_s().length()
 end
@@ -18,7 +12,7 @@ def float?(f)
   end
 end
 
-def get_amt
+def amt
   loan_amt = nil
   loop do
     print 'Enter the loan amount: '
@@ -29,7 +23,7 @@ def get_amt
   loan_amt.to_f
 end
 
-def get_apr
+def rate
   apr = nil
   loop do
     print 'Enter the APR (5 = 5%): '
@@ -40,7 +34,7 @@ def get_apr
   apr.to_f
 end
 
-def get_duration
+def duration
   loan_duration = nil
   loop do
     print 'Loan duration (in years): '
@@ -63,5 +57,5 @@ def calc_payment(loan_amt, apr, loan_duration)
 end
 
 puts 'Mortgage Calculator'
-payment = calc_payment(get_amt, get_apr, get_duration).to_i
+payment = calc_payment(amt, rate, duration).to_i
 puts "Your payments will be about $#{payment} per month!"
