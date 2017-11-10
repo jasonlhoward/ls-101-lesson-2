@@ -57,5 +57,5 @@ def calc_payment(loan_amt, apr, loan_duration)
 end
 
 puts 'Mortgage/Loan Calculator'
-payment = calc_payment(amt, rate, duration).to_i
-puts "Your payments will be ~$#{payment} per month!"
+payment = calc_payment(amt, rate, duration)
+puts "Your loan payments will be $#{format('%.2f', payment)} per month!"
