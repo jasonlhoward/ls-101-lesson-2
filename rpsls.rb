@@ -25,13 +25,13 @@ def win_verb(first, second)
     second == 'Spock' ? 'poisons' : 'eats'
   when 'Spock'
     second == 'scissors' ? 'smashes' : 'vaporizes'
-  else
+  else # rock always crushes
     'crushes'
   end
 end
 
 def display_results(player, computer, score)
-  Kernel.puts("You chose: #{player}; Computer chose: #{computer}")
+  prompt("You chose: #{player}; Computer chose: #{computer}")
   if win?(player, computer)
     update_score(0, score)
     prompt("#{player} #{win_verb(player, computer)} #{computer}")
