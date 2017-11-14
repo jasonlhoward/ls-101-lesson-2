@@ -90,8 +90,7 @@ end
 
 def valid_player(player)
   if player.length == 1 && VALID_CHOICES.map(&:chr).index(player)
-    player = VALID_CHOICES[VALID_CHOICES.map(&:chr).index(player)]
-    valid_player(player)
+    VALID_CHOICES[VALID_CHOICES.map(&:chr).index(player)]
   elsif VALID_CHOICES.include?(player)
     player
   else
