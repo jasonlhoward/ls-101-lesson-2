@@ -57,7 +57,7 @@ def display_score(score)
   computer_score = score[1]
   if player_score > computer_score
     prompt("You're winning #{player_score} to #{computer_score}!")
-  elsif score[1] > score[0]
+  elsif computer_score > player_score
     prompt("The computer is winning #{computer_score} to #{player_score}!")
   else
     prompt("The score is tied #{player_score} to #{computer_score}!")
